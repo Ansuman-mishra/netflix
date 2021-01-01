@@ -8,6 +8,7 @@ import SData from "./SData";
 let dataInfo = (val) => {
   return (
     <Card
+      key={val.id}
       imgsrc={val.imgscr}
       title={val.title}
       sname={val.sname}
@@ -18,7 +19,7 @@ let dataInfo = (val) => {
 
 ReactDOM.render(
   <>
-    <h1 className="heading">List of top 5 netflix series</h1>,{" "}
+    <h1 className="heading">List of top 5 netflix series</h1>
     {SData.map(dataInfo)};
   </>,
   document.getElementById("root")
